@@ -1,10 +1,9 @@
-<app-header></app-header>
-
+<app-header (clickedOption)="onClickMain($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="clickedOption === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="clickedOption !== 'recipe'"></app-shopping-list>
     </div>
   </div>
 </div>
