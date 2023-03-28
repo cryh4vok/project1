@@ -10,10 +10,4 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {}
-
-  clickedOption = 'recipe';
-
-  onClickMain(option: string) {
-    this.clickedOption = option;
-  }
 }
